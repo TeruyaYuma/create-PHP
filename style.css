@@ -1,0 +1,576 @@
+
+/*======================
+* グローバル
+========================*/
+body{
+    margin: 0;
+    padding: 0;
+}
+h1,h2,h3,h4,h5,h6,p,a{
+    margin: 0;
+    padding: 0;
+}
+/*======================
+* レイアウト
+========================*/
+.site-width{
+    margin:0 auto;
+    width: 80%;
+}
+.txt-center{
+    
+    text-align: center;
+    line-height: 50px;
+}
+.title{
+    height: 50px;
+    padding: 20px 0;
+    margin: 40px 0;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: .8px;
+}
+/*========================
+* フォーム
+==========================*/
+.form-container{
+    width: 35%;
+    margin: 21px auto;
+}
+.form{
+    width: 100%;
+    padding: 15px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.form .form-check{
+    float: left;
+    display: block;
+}
+.form .form-check a{
+    display: inline-block;
+}
+.form .area_msg{
+    padding-bottom: 3px;
+}
+label{
+    display: block;
+    margin-top: 10px;
+}
+label.err{
+    border: 1px dashed red;
+}
+input{
+    display: block;
+}
+input[type="text"]{
+    display: block;
+    width: 100%;
+    height: 60px;
+    padding: 15px;
+    box-sizing: border-box;
+    border: none;
+    background:#f6f5f5;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+input[type="submit"]{
+    float: right;
+    margin: 15px 0;
+    padding:15px 30px;
+    border: none;
+    border-radius: 5px;
+    background: #333;
+    color: #fff;
+    font-size: 14px;
+}
+input[type="checkbox"]{
+    display: block;
+}
+textarea{
+    display: block;
+    width: 100%;
+}
+/*======================
+* ヘッダー
+=======================*/
+.header-container{
+    width:100%;
+
+}
+.header-container .header-img{
+    position: relative;
+    width:100%;
+    height: 750px;
+    background:url(img/hero.jpg);
+    background-position: top center;
+    background-attachment: fixed;
+}
+.header-container .header-logo{  
+    position:absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 300px;
+    height: 250px;
+    text-align: center;
+    line-height: 66px;
+    letter-spacing: 6px;
+}
+.header-container .header-logo::after{
+    content:'Portforio';
+    position: absolute;
+    bottom: -10px;
+    right: -55px;
+    transform: rotate(-6deg);
+    -moz-transform: rotate(-6deg);
+    -webkit-transform: rotate(-6deg);
+    -o-transform: rotate(-6deg);
+    -ms-transform: rotate(-6deg);
+    font-size: 35px;
+    font-weight: bold;
+    color: red;
+}
+.header-container .header-logo a{
+    width: 100%;
+    height: auto;
+    text-decoration: none;
+    color: black;
+}
+.header-container .logo-wrapper{
+    background: rgb(255, 255, 255);
+    opacity: .3;
+    border-radius: 30px;
+    width: 100%;
+    height: 250px;
+}
+.header-container .header-logo h2{
+    font-size: 40px;
+}
+.header-container .header-logo p{
+    font-size: 50px;
+}
+.navigation-container{
+    width:100%;
+    height: 75px;
+}
+.navigation-wrapper{
+    overflow:hidden;
+    height: 75px;
+}
+.navigation-wrapper .navigation-left{
+    float:left;
+    line-height: 75px;
+}
+.navigation-wrapper .navigation-left h1{
+    margin: 0;
+    line-height: 75px;
+}
+.navigation-wrapper .navigation-left a{
+    text-decoration: none;
+    color: #555;
+}
+.navigation-wrapper .navigation-right{
+    float:right;
+    position:relative;
+    width: 50%;
+    height:75px;
+
+}
+.navigation-wrapper .navigation-right ul{
+    position:absolute;
+    right: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    height:75px;
+    line-height: 75px;
+}
+.navigation-wrapper .navigation-right li{
+    float:left;
+    margin-right: 5px;
+    width:80px;
+    height:75px;
+    list-style: none;
+}
+.navigation-wrapper .navigation-right a{
+    position: relative;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #555;
+}
+.navigation-wrapper .navigation-right a::before{
+    content:"";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background: #555;
+    transform: scale(0,1);
+    transition: 0.4s;
+}
+.navigation-wrapper .navigation-right a:hover,
+.navigation-wrapper .navigation-right a:hover::before{
+    transform: scale(1);
+    color:black;
+}
+/*============================
+* チャットボード
+==============================*/
+main .bord-container{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    display: inline-block;
+    border: 2px dotted black;
+    width: 200px;
+    height: 100px;
+    margin: 10px;
+    background: #fff;
+    text-align: center;
+}
+main .bord-nav{
+    padding: 5px;
+    margin: 5px;
+}
+main .btn-container{
+    margin-top: 10px;
+}
+main .btn-container button{
+    cursor: pointer;
+}
+/*============================
+* work
+==============================*/
+#work{
+    width: 100%;
+}
+.work{
+    position: relative;
+    width: 100%;
+}
+.work::after{
+    content:'Work';
+    position: absolute;
+    bottom: -10px;
+    transform: rotate(-6deg);
+    -moz-transform: rotate(-6deg);
+    -webkit-transform: rotate(-6deg);
+    -o-transform: rotate(-6deg);
+    -ms-transform: rotate(-6deg);
+    font-size: 35px;
+    font-weight: bold;
+    color: red;
+}
+.products{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.products .product{
+    margin: 0;
+    /* border: 1px solid black; */
+    box-sizing: border-box;
+}
+.products .left{
+    float: left;
+    width:40%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+.container-sticky{
+    /* position: sticky;
+    position: -webkit-sticky;
+    top: 70%; */
+}
+.product-img{
+    width:35%;
+    height: auto;
+    margin: 10px auto;
+}
+.product-img img{
+    width:100%;
+    height: auto;
+}
+.products .right{
+    float: right;
+    width: 55%;
+    min-height: 300px;
+}
+.product-contents{
+    width: 100%;
+    /* padding:5px;
+    box-sizing: border-box;
+    border: 1px solid black; */
+    overflow: hidden;
+}
+.product-contents .img{
+    float: right;
+    width: 50%;
+}
+.product-contents .img img{
+    max-width: 100%;
+    background-size: cover;
+}
+.product-contents .article{
+    float: right;
+    padding: 5px;
+    box-sizing: border-box;
+    width: 50%;
+    height: 170px;
+}
+
+/*============================= 
+* about
+ ==============================*/
+ #about{
+     width: 100%;
+ }
+ .about{
+     position: relative;
+     width: 100%;
+ }
+ .about::after{
+    content:'About';
+    position: absolute;
+    bottom: -10px;
+    transform: rotate(-6deg);
+    -moz-transform: rotate(-6deg);
+    -webkit-transform: rotate(-6deg);
+    -o-transform: rotate(-6deg);
+    -ms-transform: rotate(-6deg);
+    font-size: 35px;
+    font-weight: bold;
+    color: red;
+}
+#footer{
+    width: 100%;
+}
+.footer{
+    width: 100%;
+    padding: 10px 0;
+    color: #cfcbca;
+    background: #312a2a;
+    text-align: center;
+}
+/*=========================
+* メッセージエリア
+===========================*/
+.msg-container{
+
+}
+.msg-container .msg{
+    width: 100%;
+}
+.msg-container .msg-contents{
+    width: 100%;
+    height: 400px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-image: url(img/chat.jpg);
+    background-size: cover;
+    overflow: scroll;
+}
+.msg-contents .left-container{
+    margin: 10px 0;
+    width: 100%;
+    overflow: hidden;
+}
+.msg-contents .contents-left{
+    float: left;
+    margin: 30px;
+}
+.contents-left .contents-left-name{
+    padding: 5px 0;
+}
+.contents-left .contents-left-txt{
+    position: relative;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background: #fff;
+}
+.contents-left .contents-left-txt:before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -21px;
+    margin-top: -12px;
+    border: 12px solid transparent;
+    border-right: 12px solid #FFF;
+    z-index: 2;
+  }
+  .msg-contents .right-container{
+    margin: 10px 0;
+    width: 100%;
+    overflow: hidden;
+}
+  .msg-contents .contents-right{
+    float: right;
+    margin: 30px;
+}
+.contents-right .contents-right-name{
+    padding: 5px 0;
+    text-align: right;
+}
+.contents-right .contents-right-txt{
+    position: relative;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    background: #33FF33;
+}
+.contents-right .contents-right-txt:before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -21px;
+    margin-top: -12px;
+    border: 12px solid transparent;
+    border-left: 12px solid #33FF33;
+    z-index: 2;
+  }
+  .msg-container .send-msg-area{
+      width: 100%;
+      overflow: hidden;
+  }
+  .send-msg-area .txt-container{
+      width: 50%;
+      margin: 0 auto;
+  }
+  .txt-container textarea{
+      width: 100%;
+      height: 100px;
+      box-sizing: border-box;
+  }
+  /*===========================
+  * マイページ
+  =============================*/
+  .myPage{
+      width: 100%;
+  }
+  .myPage .myPage-txt{
+      font-size: 70px;
+      letter-spacing: 1px;
+      line-height: 100px;
+  }
+  .form .category-container{
+      width: 30%;
+      margin-bottom: 15px;
+  }
+  .form .name-wrapper{
+      margin-bottom: 15px;
+  }
+  .form .name-wrapper input[type="text"]{
+      border: 1px solid black;
+      background: #fff;
+  }
+  .imgDrop-container{
+      margin-bottom: 15px;
+      padding: 5px;
+      width:100%;
+      border: 1px solid black;
+      box-sizing: border-box;
+  }
+  .area-drop{
+      width: 100%;
+      height: 150px;
+      text-align: center;
+      line-height: 150px;
+      position: relative;
+  }
+  .input-file{
+      opacity: 0;
+      width: 100%;
+      height: 150px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+  }
+  .prev-img{
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
+  .txt-container{
+    width: 100%;
+  }
+  .txt-container .txt-area{
+      width: 100%;
+      height: 30px;
+  }
+  /*=======================
+  * プロダクト
+  =========================*/
+  .product-container{
+      margin: 40px auto;
+      overflow: hidden;
+  }
+  #side-bar{
+      float: left;
+      width: 18%;
+  }
+  #side-bar .search-container{
+      width: 100%;
+      height: 500px;
+      background: gray;
+  }
+  #side-bar form{
+      border: none;
+  }
+  #side-bar select{
+    padding: 10px;
+    width: 100%;
+    border-color: #ccc;
+    border-radius: 0;
+    font-size: 14px;
+  
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  #main{
+      float: right;
+      width: 80%;
+  }
+  #main .search-title{
+     width: 100%;
+     padding: 10px;
+     box-sizing: border-box;
+     background: gray; 
+     overflow: hidden;
+  }
+  #main .search-left{
+      float: left;
+  }
+  #main .search-right{
+    float: right;
+}
+#main .panel-list{
+    padding: 10px;
+    box-sizing: border-box;
+}
+#main .panel-wrapper{
+    width: 100%;
+    overflow: hidden;
+}
+.panel-wrapper .panel-list{
+    width: 50%;
+    float: left;
+}
+.panel-wrapper .panel-img{
+    width: 100%;
+}
+.panel-wrapper .panel-img img{
+    max-width: 100%;
+}
